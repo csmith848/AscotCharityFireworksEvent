@@ -219,7 +219,7 @@ main {
 
 /* ***** NEWS PAGE ***** */
 .news_img {
-	margin: 2em auto 0 auto; 
+	margin: 2em auto 0 auto;
 	display: block;
 	width: 90%;
 }
@@ -241,7 +241,7 @@ main {
 
 /* ***** TICKETS PAGE ***** */
 
-#school_codes {
+/* #school_codes {
 	width: 500px;
 	margin-left: auto;
 	margin-right: auto;
@@ -263,9 +263,84 @@ main {
 	padding: 7px 18px;
 	font-weight: 400;
 	font-size: 1em;
+} */
+
+#tickets_table {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	color: white;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+div.tickets_row {
+	overflow: hidden;
+}
+
+div.tickets_cell {
+	float: left;
+	min-width: 260px;
+	padding: 8px 18px;
+	font-weight: 400;
+	font-size: 1em;
+	border: 1px solid white;
+}
+
+div.tickets_cell:nth-child(4) {
+	min-width: 200px;
+}
+
+div.tickets_heading {
+	padding: 10px 18px;
+	font-weight: 600;
+	font-size: 1.25em;
+	text-align: center;
+}
+
+div.tickets_heading:nth-child(2) {
+	min-width: 200px;
+}
+
+div.tickets_school , div.tickets_promo {
+	display: none;
+	font-size: 1.1em;
 }
 
 
+@media screen and (max-width:700px) {
+	#tickets_table {
+		margin-top: 0;
+		width: 350px;
+	}
+	div.tickets_heading {
+		display: none;
+	}
+	div.tickets_school , div.tickets_promo {
+		display: block;
+		min-width: auto;
+		clear: left;
+		padding-right: 10px;
+	}
+	div.tickets_promo {
+		display: block;
+	}
+	div.tickets_row {
+		padding-top: 1em;
+  }
+	div.tickets_cell {
+		padding: 0;
+		height: 21px;
+		border: none;
+	}
+	div.tickets_cell_move {
+		padding-left: 15px;
+	}
+	div.tickets_cell_move:nth-child(4) {
+		padding-left: 24px;
+	}
+}
 
 /* ***** PICTURES PAGE ***** */
 
@@ -344,13 +419,13 @@ main {
 		width: 100%;
 		margin-bottom: 20px;
 	}
-	
+
 	#more_sponsors_img img {
 		display: block;
 		margin: 0 auto;
 		max-width: 250px;
 	}
-	
+
 	#more_sponsors_text {
 		display: block;
 		margin: 0 auto;
@@ -424,7 +499,7 @@ input[type=submit]:hover {
 /*	margin: 0px 20px 20px 20px;*/
 }
 
-.form_row {	
+.form_row {
     display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -471,7 +546,7 @@ input[type=submit]:hover {
 
 /*FOOTER - NOT IN USE*/
 footer {
-	
+
 }
 
 

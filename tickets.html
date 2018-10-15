@@ -1,6 +1,6 @@
 <!DOCTYPE html5>
 <html>
-	
+
 <head>
 	<meta charset="utf-8">
 
@@ -73,7 +73,7 @@
 				<p>
 					After completion of your purchase you will print each ticket out.
 					<br>
-					<span class="alert_text">If you cannot print tickets now, please do not proceed.</span> 
+					<span class="alert_text">If you cannot print tickets now, please do not proceed.</span>
 					<br>
 					You must bring all your printed tickets with you to the gate to be scanned and allow entry.
 					<br>
@@ -106,7 +106,9 @@
 				</h2>
 				<br>
 			</div>
-			<table id="school_codes">
+
+			<!-- *** OLD STATIC TABLE - table overflowed to right on narrow screens *** -->
+			<!-- <table id="school_codes">
 			<tr>
 				<th>School</th>
 				<th>Promotion Code</th>
@@ -183,20 +185,137 @@
 				<td>Warfield CofE – Woodhurst</td>
 				<td>woodhurst</td>
 			</tr>
-		</table>
+		</table> -->
+
+			<!-- *** NEW DYNAMIC TABLE - changes from table to list of items on smaller screens *** -->
+			<div id="tickets_table">
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_heading">School</div>
+						<div class="tickets_cell tickets_heading">Promotion Code</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">St Mary's C of E Winkfield</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">stmarysce</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">Ascot Heath Junior School</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">ascotheathjun</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">Ascot Heath Infant School</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">ascotheathinfant</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">Cranbourne County</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">cranbourne</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">Ascot &amp; Cranbourne Pre-School</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">ascranpreschool</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">Papplewick School</div>
+							<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">papplewick</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">Licenses Victuallers School</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">lvaschool</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">Cheapside Primary</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">cheapside</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">South Ascot Village</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">sascvillage</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">St Francis</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">stfrancis</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">St Michaels Primary</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">stmichaels</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">Holy Trinity Primary</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">holytrinity</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">Charters</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">charters</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">Queen Anne</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">queenanne</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">The Royal School, Windsor Great Park</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">theroyalschool</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">Whitegrove Primary School</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">whitegrove</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">Warfied CofE - All Saints</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">allsaints</div>
+					</div>
+					<div class="tickets_row">
+						<div class="tickets_cell tickets_school">School:</div>
+						<div class="tickets_cell tickets_cell_move">Warfield CofE – Woodhurst</div>
+						<div class="tickets_cell tickets_promo">Code:</div>
+						<div class="tickets_cell tickets_cell_move">woodhurst</div>
+					</div>
+				</div>
+
 		</div>
-	</div>			
+	</div>
 </main>
 
 <footer>
 	<div>
 		<!--	BACKGROUND-BOTTOM    -->
 		<img class="background" id="background_bottom" src="img/background_bottom.jpg" alt="Background_Bottom">
-		<!---->			
+		<!---->
 	</div>
 
 <!--
-			EVENT INFORMATION    
+			EVENT INFORMATION
 		<div class="homepage_copy" id="info">
 			<p id="info_subheader">
 			ASCOT CHARITY FIREWORKS EVENT
@@ -220,12 +339,12 @@
 	This event is organised by Ascot Round Table, which is affiliated to the National Association of Round Tables of Britain &amp; Ireland
 	<br>
 	www.roundtable.co.uk
-	<br>	
+	<br>
 	Ascot Round Table is registered with the Charity Commission, number 1057937
 	</p>
 	<!---->
 </footer>
 
 </body>
-	
+
 </html>
