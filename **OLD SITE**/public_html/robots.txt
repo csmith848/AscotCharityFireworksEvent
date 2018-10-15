@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /showcount.php
-
-Sitemap: http://www.ascotfireworks.org.uk/sitemap.xml
