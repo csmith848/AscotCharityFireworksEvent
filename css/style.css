@@ -1,0 +1,543 @@
+@charset "UTF-8";
+
+/*MASTER CONTROL*/
+
+body {
+	margin: 0 0 0 0;
+	background-color: rgb(7, 17, 28);
+/*	background-color: #000000;*/
+}
+
+h1 {
+	font-weight: 400;
+}
+
+h2 {
+	font-weight: 400;
+	margin-top: 1.5em;
+	margin-bottom: 0px;
+}
+
+h3 {
+	margin-top: 2em;
+	margin-bottom: -0.5em;
+	font-weight: 400;
+	font-size: 1.2em;
+}
+
+hr {
+	margin: 2.5em 2em;
+	border-width: 1 0 0 0;
+}
+
+/*HEADER*/
+
+header {
+/*	position: absolute;*/
+	display: block;
+}
+
+
+
+/*BACKGROUNDS*/
+
+.background {
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+/*	position: absolute;*/
+}
+
+#background_top {
+/*	z-index: 2;*/
+}
+
+#background_bottom {
+/*	z-index: 1;*/
+/*	opacity: 0.99;*/
+}
+
+
+
+/*NAVIGATION BAR*/
+
+ul.nav {
+	margin: 0;
+	width: 100%;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	text-align: center;
+	list-style: none;
+	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	background-color: rgb(7, 17, 28);
+	border-top: 1px rgba(255, 255, 255, 0.38) solid;
+	border-bottom: 1px rgba(255, 255, 255, 0.38) solid;
+}
+
+.nav li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+/*	background-color: rgba(0, 0, 0, 0.2);*/
+	width: calc(100%/8.4);
+}
+
+.nav a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 6px 4px;
+	margin: 0;
+	font-size: 1.2em;
+	transition: text-shadow 500ms;
+}
+
+/*
+ul.nav li:first-child a{
+    border-left: none;
+}
+ul.nav li:last-child a {
+    border-right: none;
+}
+*/
+
+.nav a:hover {
+	color: rgb(240, 240, 240);
+	text-shadow: 2px 0px 1.25em rgba(255, 255, 255, 0.4), -2px 0px 1.25em rgba(255, 255, 255, 0.4), 0px 2px 1.25em rgba(255, 255, 255, 0.4), 0px -2px 1.25em rgba(255, 255, 255, 0.4);
+}
+
+.nav a.active {
+	background-color: rgba(0, 0, 0, 0.7);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+	text-shadow: none;
+	cursor: default;
+/*	box-shadow: 0px 0px 8px 0px rgb(177, 177, 177);*/
+}
+
+@media screen and (max-width: 660px) {
+	.nav li {
+		width: 49%;
+		border-bottom: 1px rgba(255, 255, 255, 0.38) solid;
+		font-size: 0.9em;
+	}
+	.nav li:nth-child(1), .nav li:nth-child(2){
+    	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	}
+	ul.nav {
+		padding: 1px 0;
+		border: none;
+	}
+}
+
+
+
+/*MAIN SECTION*/
+main {
+/*	box-shadow: 0px 0px 8px 0px rgb(177, 177, 177);*/
+	background-color: black;
+	padding: 20px 0px;
+	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	color: white;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main_intro {
+	font-size: 1.15em;
+	font-weight: 400;
+	margin: 1em 3em;
+	text-align: center;
+}
+
+.main_intro_heading {
+	font-size: 1.15em;
+	font-weight: 600;
+	padding: 0.8em 0;
+	margin: 0 3em;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+.main_copy {
+	text-align: left;
+	font-weight: 400;
+/*	max-width: 1000px;*/
+	margin: 0 5em;
+	padding: 0 3em;
+}
+
+/* responsive design for all screens smaller than 800px wide */
+@media screen and (max-width: 850px) {
+	.main_intro {
+		margin: 1em 1em;
+	}
+	.main_intro_heading {
+		margin: 0 1em;
+	}
+	.main_copy {
+		margin: 0 1em;
+		padding: 0 2em;
+	}
+}
+
+/* responsive design for all screens smaller than 450px wide */
+@media screen and (max-width: 450px) {
+	.main_intro {
+		margin: 1em 0.5em;
+	}
+	.main_intro_heading {
+		margin: 0 0.5em;
+	}
+	.main_copy {
+		margin: 0 0.5em;
+		padding: 0 1em;
+	}
+}
+
+.external_link {
+	color: ff6c00;
+	text-decoration: none;
+	text-shadow: 0px 0px 0.1em rgba(255, 108, 0, 0.75);
+}
+
+.subtext {
+	font-size: 0.8em;
+	font-weight: 300;
+}
+
+.alert_text {
+	color: red;
+	margin: 0;
+}
+
+
+
+/* ***** NEWS PAGE ***** */
+.news_img {
+	margin: 2em auto 0 auto; 
+	display: block;
+	width: 90%;
+}
+
+.news_img img {
+	width: 45%;
+	vertical-align: middle;
+	padding: 1em;
+}
+
+/* responsive design to force two images to stack on top of each other rather than side to side */
+@media screen and (max-width: 1100px) {
+	.news_img img {
+		width: 80%;
+	}
+}
+
+
+
+/* ***** TICKETS PAGE ***** */
+
+#school_codes {
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	color: white;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+#school_codes th {
+	border: 1px solid white;
+	padding: 8px 18px;
+	font-weight: 600;
+	font-size: 1.25em;
+}
+
+#school_codes td {
+	border: 1px solid white;
+	padding: 7px 18px;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+
+
+/* ***** PICTURES PAGE ***** */
+
+.img_row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.img_column {
+	flex: 24%;
+	max-width: 24%;
+	padding: 0 4px;
+}
+
+.img_column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	box-shadow: 0px 0px 1px 0px rgb(177, 177, 177);
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+	.img_column {
+		flex: 48%;
+		max-width: 48%;
+	}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+	.img_column {
+		flex: 100%;
+		max-width: 100%;
+	}
+}
+
+
+/* ***** MORE PAGE ***** */
+
+
+#more_sponsors_info {
+	margin: 20px 0;
+}
+
+#more_sponsors_img {
+	display: inline-block;
+	width: 30%;
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 20px;
+}
+
+#more_sponsors_text {
+	display: inline-block;
+	width: 65%;
+}
+
+#more_sponsors_text h3 {
+	margin-top: 0;
+}
+
+#more_sponsors_img img {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 200px;
+}
+
+@media screen and (max-width:700px) {
+	#more_sponsors_img {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	
+	#more_sponsors_img img {
+		display: block;
+		margin: 0 auto;
+		max-width: 250px;
+	}
+	
+	#more_sponsors_text {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+
+#more_community_table {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+/*
+#more_community_table tr,td {
+	border: none;
+	padding: 0.4em 3em 0 0;
+}
+*/
+
+div.more_community_row {
+	overflow: hidden;
+	padding-top: 0.4em;
+}
+
+div.more_community_cell {
+	float: left;
+	padding-right: 1em;
+	min-width: 250px;
+}
+
+@media screen and (max-width:700px) {
+	#more_community_table {
+		margin-top: 0;
+	}
+	div.more_community_row {
+		padding-top: 1em;
+  	}
+	div.more_community_cell {
+		float: none;
+	}
+}
+
+
+
+/* ***** CONTACT PAGE ***** */
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.form_container {
+/*	padding: 0 10px;*/
+/*	margin: 0px 20px 20px 20px;*/
+}
+
+.form_row {	
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* Create two columns that float next to eachother */
+.form_column {
+/*	width: 30vw;*/
+	max-width: 30vw;
+    margin: 0px 20px;
+    padding: 1em;
+	flex: 24%;
+}
+
+/* Clear floats after the columns */
+.form_row:after {
+	content: "";
+    display: table;
+    clear: both;
+}
+
+#map {
+/*	width: 100%;*/
+/*	width: 40%;*/
+	height: 400px;
+	background-color: rgba(245, 245, 245, 0.57);
+	border: 1px white solid;
+	box-shadow: 0px 0px 8px rgb(177, 177, 177);
+	color: dimgrey;
+	text-align: center;
+	line-height: 380px;
+	margin: 1em 0;
+}
+
+/* Responsive layout - when the screen is less than 900px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 900px) {
+	.form_column, input[type=submit] {
+		width: 100%;
+		margin-top: 0;
+	}
+}
+
+
+
+/*FOOTER - NOT IN USE*/
+footer {
+	
+}
+
+
+/*EVENT INFORMATION*/
+
+#info {
+	position: absolute;
+	width: 100%;
+	margin-top: 160;
+	margin-left: 40;
+	text-align: left;
+	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	font-weight: 600;
+	font-size: 14;
+	letter-spacing: -0.8px;
+	color: white;
+	text-shadow: 0px 1px #000000;
+}
+
+#info_subheader {
+	line-height: 0.4;
+}
+
+
+.homepage_copy {
+/*	position: absolute;*/
+/*	float: left;*/
+	bottom: 70px;
+}
+
+
+/*SPONSOR INFORMATION*/
+
+#sponsor {
+	color: #ff6c00;
+}
+
+#logo_sponsor {
+	height: 50px;
+}
+
+
+
+/*FOOTER*/
+
+#charity_info {
+	display: block;
+	text-align: center;
+	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	color: white;
+	font-size: 0.7em;
+	text-shadow: 0px 1px #5e5e5e;
+	background-color: rgba(245,245,245,0.5);
+/*	background-color: rgba(0, 0, 0, 0.5);*/
+	padding: 4px 0px;
+/*	position: absolute; */
+	width: 100%;
+	max-width: 1200px;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+/*	bottom: 0px;*/
+}
+
+@media screen and (max-width: 600px) {
+	#charity_info {
+		font-size: 0.5em;
+	}
+}

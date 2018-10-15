@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>http://www.ascotfireworks.org.uk/</loc>
+  <lastmod>2013-10-26T16:11:26+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.ascotfireworks.org.uk/attractions.php</loc>
+  <lastmod>2013-09-22T11:57:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.ascotfireworks.org.uk/community.php</loc>
+  <lastmod>2013-09-22T11:57:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.ascotfireworks.org.uk/contact.php</loc>
+  <lastmod>2013-09-22T11:57:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.ascotfireworks.org.uk/details.php</loc>
+  <lastmod>2013-10-08T14:58:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.ascotfireworks.org.uk/directions.php</loc>
+  <lastmod>2013-09-22T11:57:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.ascotfireworks.org.uk/news.php</loc>
+  <lastmod>2013-10-19T12:05:26+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.ascotfireworks.org.uk/pictures.php</loc>
+  <lastmod>2013-09-22T11:57:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.ascotfireworks.org.uk/refreshments.php</loc>
+  <lastmod>2013-09-22T11:57:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.ascotfireworks.org.uk/safety.php</loc>
+  <lastmod>2013-09-22T11:57:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.ascotfireworks.org.uk/special.php</loc>
+  <lastmod>2013-09-22T11:57:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.ascotfireworks.org.uk/sponsors.php</loc>
+  <lastmod>2013-09-22T11:57:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://www.ascotfireworks.org.uk/tips.php</loc>
+  <lastmod>2013-09-22T11:57:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+</urlset>
