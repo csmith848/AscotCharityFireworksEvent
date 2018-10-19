@@ -4,31 +4,32 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 
   <style media="screen">
-    .portal , .portal_button {
+    .portal , #portal_button {
       max-width: 500px;
       margin: 0 auto;
     }
 
-    .portal_button {
+    #portal_button {
       display: block;
       height: 3em;
       min-width: 13em;
       padding: 0;
       text-align: center;
-      color: grey;
     	text-decoration: none;
     	text-shadow: 0px 0px 0.1em rgba(255, 108, 0, 0.75);
       font-size: 1.4em;
       font-kerning: 10px;
       font-weight: 500;
       text-transform: uppercase;
-      border: 2px solid grey;
       border-radius: 8px;
+      background-color: transparent;
+
+      color: grey;
+      border: 2px solid grey;
       box-shadow: 0px 0px 20px grey;
-      background-color: black;
     }
 
-    .terms_banner {
+    #terms_banner {
       border-top: 1px solid white;
       border-bottom: 1px solid white;
       padding: 10px;
@@ -37,35 +38,28 @@
     	font-size: 1.2em;
     }
 
-    .terms_banner input[type=checkbox] {
+    #terms_banner input[type=checkbox] {
       margin-top: 10px;
       zoom: 1.5;
     }
   </style>
 
   <script>
-    // var checkbox = document.getElementById("terms_accept");
-    // var ticket_portal = document.getElementById("ticket_portal");
-
     function termsAccept() {
       if (checkbox = document.getElementById("terms_accept").checked) {
-        // document.getElementById("tickets_portal").style.display = "none";
-        document.getElementById("tickets_portal").disabled = false;
-        document.getElementById("tickets_portal").style.color = "#ff6c00";
-        document.getElementById("tickets_portal").style.border = "2px solid #ff6c00";
-        document.getElementById("tickets_portal").style["boxShadow"] = "0px 0px 20px rgba(255, 108, 0, 0.75)";
+        // WHEN LINK IS ACTIVE
+        document.getElementById("portal_button").disabled = false;
+        document.getElementById("portal_button").style.color = "#ff6c00";
+        document.getElementById("portal_button").style.border = "2px solid #ff6c00";
+        document.getElementById("portal_button").style["boxShadow"] = "0px 0px 20px rgba(255, 108, 0, 0.75)";
       }
       else {
-        // document.getElementById("tickets_portal").style.display = "block";
-        document.getElementById("tickets_portal").disabled = true;
-        document.getElementById("tickets_portal").style.color = "grey";
-        document.getElementById("tickets_portal").style.border = "2px solid grey";
-        document.getElementById("tickets_portal").style["boxShadow"] = "0px 0px 20px grey";
+        // WHEN LINK IS NOT ACTIVE
+        document.getElementById("portal_button").disabled = true;
+        document.getElementById("portal_button").style.color = "grey";
+        document.getElementById("portal_button").style.border = "2px solid grey";
+        document.getElementById("portal_button").style["boxShadow"] = "0px 0px 20px grey";
       }
-
-      // if (document.getElementById("tickets_portal").disabled = true) {
-        // document.getElementById("tickets_portal").oncl
-      // }
     }
   </script>
 </head>
@@ -73,18 +67,15 @@
 <body>
 
 <main>
-  <!-- <form action="oltickets.php" method="post"> -->
-  <!-- <input type="checkbox" name="confirmed" value="yes" onclick="submit();"> -->
-  <!-- </form> -->
   <div>
-    <form class="portal" action="" method="post">
-      <p class="terms_banner">
-        <label for="accept">By checking this box, you agree that you have read and understood all of the information above.</label>
+    <form id="ticket_portal_form" class="portal" method="post">
+      <p id="terms_banner">
+        <label for="terms_accept">By checking this box, you agree that you have read and understood all of the information above.</label>
         <br>
-        <input id="terms_accept" type="checkbox" name="accept" value="accept" onclick="termsAccept()">
+        <input id="terms_accept" type="checkbox" name="terms_accept" value="accept" onclick="termsAccept()">
       </p>
       <br>
-      <button id="tickets_portal" class="portal_button" href="https://tickets.ascot.co.uk/connect/Webpages/EntaWebGateway/gateway.aspx?E=N&QL=P5332|G~/WEBPAGES/ascot/eventprices.aspx" target="_blank" disabled><u>online ticket portal</u></button>
+      <button id="portal_button" type="button" onclick="location.href='https://tickets.ascot.co.uk/connect/Webpages/EntaWebGateway/gateway.aspx?E=N&QL=P5332|G~/WEBPAGES/ascot/eventprices.aspx'" value="Go to ticket portal" disabled><u>online ticket portal</u></button>
     </form>
   </div>
 <br>
