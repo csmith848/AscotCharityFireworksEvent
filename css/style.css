@@ -242,38 +242,50 @@ main {
 
 /* ***** TICKETS PAGE ***** */
 
-/* #school_codes {
-	width: 500px;
-	margin-left: auto;
-	margin-right: auto;
-	border-collapse: collapse;
-	color: white;
-	margin-top: 40px;
-	margin-bottom: 20px;
+.portal , #portal_button {
+	max-width: 500px;
+	margin: 0 auto;
 }
 
-#school_codes th {
-	border: 1px solid white;
-	padding: 8px 18px;
-	font-weight: 600;
-	font-size: 1.25em;
+#portal_button {
+	display: block;
+	height: 3em;
+	min-width: 13em;
+	padding: 0;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0px 0px 0.1em rgba(255, 108, 0, 0.75);
+	font-size: 1.4em;
+	font-kerning: 10px;
+	font-weight: 500;
+	text-transform: uppercase;
+	border-radius: 8px;
+	background-color: transparent;
+
+	color: grey;
+	border: 2px solid grey;
+	box-shadow: 0px 0px 20px grey;
 }
 
-#school_codes td {
-	border: 1px solid white;
-	padding: 7px 18px;
+#terms_banner {
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	padding: 10px;
+	text-align: center;
 	font-weight: 400;
-	font-size: 1em;
-} */
+	font-size: 1.2em;
+}
+
+#terms_banner input[type=checkbox] {
+	margin-top: 10px;
+	zoom: 1.5;
+}
 
 #tickets_table {
 	width: 600px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 1.5em auto;
 	border-collapse: collapse;
 	color: white;
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
 }
 
 div.tickets_row {
@@ -289,9 +301,9 @@ div.tickets_cell {
 	border: 1px solid white;
 }
 
-div.tickets_cell:nth-child(4) {
+/* div.tickets_cell:nth-child(4) {
 	min-width: 200px;
-}
+} */
 
 div.tickets_heading {
 	padding: 10px 18px;
@@ -300,9 +312,9 @@ div.tickets_heading {
 	text-align: center;
 }
 
-div.tickets_heading:nth-child(2) {
+/* div.tickets_heading:nth-child(2) {
 	min-width: 200px;
-}
+} */
 
 div.tickets_school , div.tickets_promo {
 	display: none;
