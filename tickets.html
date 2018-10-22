@@ -41,6 +41,13 @@
         document.getElementById("portal_button").style["boxShadow"] = "0px 0px 20px grey";
       }
     }
+		function portalClick() {
+      if (document.getElementById("terms_accept").checked) {
+        window.open('https://tickets.ascot.co.uk/connect/Webpages/EntaWebGateway/gateway.aspx?E=N&QL=P5332|G~/WEBPAGES/ascot/eventprices.aspx' , '_blank')
+      } else {
+        alert("Please accept the terms above!");
+      }
+		}
   </script>
 
 </head>
@@ -138,7 +145,7 @@
 			        <input id="terms_accept" type="checkbox" name="terms_accept" value="accept" onclick="termsAccept()">
 			      </p>
 			      <br>
-			      <button id="portal_button" type="button" onclick="window.open('https://tickets.ascot.co.uk/connect/Webpages/EntaWebGateway/gateway.aspx?E=N&QL=P5332|G~/WEBPAGES/ascot/eventprices.aspx' , '_blank')" value="Go to ticket portal" disabled><u>online ticket portal</u></button>
+						<button id="portal_button" type="button" onclick="portalClick()" value="Go to ticket portal"><u>online ticket portal</u></button>
 			    </form>
 			  </div>
 
