@@ -26,13 +26,13 @@
 
   <script>
     function openMenu() {
-      var testNav = document.getElementsByClassName('testNav')[0];
+      var nav = document.getElementsByClassName('nav')[0];
 
-      if (testNav.style.display === "block") {
-        testNav.style.display = "none";
+      if (nav.style.display === "block") {
+        nav.style.display = "none";
       }
       else {
-        testNav.style.display = "block";
+        nav.style.display = "block";
       }
     }
 
@@ -62,17 +62,17 @@
 <header>
 
 	<div>
-    <button class="nav" type="button" name="Menu" onclick="openMenu()">Menu</button>
-    <div class="testNav"></div>
+    <button class="menuNav" type="button" name="Menu" onclick="openMenu()">Menu</button>
+    <div class="testNav">hello</div>
     <ul class="nav">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="details.html">Details</a></li>
-			<li><a href="news.html">News</a></li>
-			<li><a href="tickets.html">Tickets</a></li>
-			<li><a href="pictures.html">Pictures</a></li>
-			<li><a href="faq.html">FAQ</a></li>
-			<li><a href="more.html">More</a></li>
-			<li><a href="contact.html">Contact</a></li>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../details.html">Details</a></li>
+			<li><a href="../news.html">News</a></li>
+			<li><a href="../tickets.html">Tickets</a></li>
+			<li><a href="../pictures.html">Pictures</a></li>
+			<li><a href="../faq.html">FAQ</a></li>
+			<li><a href="../more.html">More</a></li>
+			<li><a href="../contact.html">Contact</a></li>
 		</ul>
 	</div>
 	<!---->
