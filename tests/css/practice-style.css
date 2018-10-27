@@ -4,22 +4,44 @@ body {
 }
 
 img {
-	position: relative;
 	max-width: 100%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	position: relative;
+}
+
+
+/*HEADER*/
+
+header {
+/*	position: absolute;*/
+	display: block;
+}
+
+
+/*BACKGROUNDS*/
+
+#background_top {
+	/* z-index: 2; */
+}
+
+#background_bottom {
+/*	z-index: 1;*/
+/*	opacity: 0.99;*/
 }
 
 
 /*NAVIGATION BAR*/
 
 button.menuNav {
+	position: relative;
 	display: none;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 6px 4px;
+	z-index: 3;
 
 	color: white;
 	text-align: center;
@@ -41,8 +63,7 @@ button.menuNav:hover {
 	text-shadow: 2px 0px 1.25em rgba(255, 255, 255, 0.4), -2px 0px 1.25em rgba(255, 255, 255, 0.4), 0px 2px 1.25em rgba(255, 255, 255, 0.4), 0px -2px 1.25em rgba(255, 255, 255, 0.4);
 }
 
-.testNav {
-	/* display: none; */
+/* .testNav {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -60,7 +81,7 @@ button.menuNav:hover {
 
 .testNav:hover::after {
 	transform: scaleX(2);
-}
+} */
 
 @media screen and (max-width: 660px) {
 	button.menuNav {
@@ -69,16 +90,21 @@ button.menuNav:hover {
 }
 
 ul.nav {
-	display: none;
+	/* display: none; */
+	top: -136px;
 	margin: 0;
 	width: 100%;
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0;
+	position: relative;
+	z-index: 1;
+
 	text-align: center;
 	list-style: none;
 	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+
 	background-color: rgb(7, 17, 28);
 	border-top: 1px rgba(255, 255, 255, 0.38) solid;
 	border-bottom: 1px rgba(255, 255, 255, 0.38) solid;

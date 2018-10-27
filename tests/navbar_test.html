@@ -25,34 +25,32 @@
 	<!---->
 
   <script>
-    function openMenu() {
-      var nav = document.getElementsByClassName('nav')[0];
-
-      if (nav.style.display === "block") {
-        nav.style.display = "none";
-      }
-      else {
-        nav.style.display = "block";
-      }
-    }
-
-    // function myFunction() {
-    //   var dots = document.getElementById("dots");
-    //   var moreText = document.getElementById("more");
-    //   var btnText = document.getElementById("myBtn");
-    //
-    //   if (dots.style.display === "none") {
-    //     dots.style.display = "inline";
-    //     btnText.innerHTML = "Read more";
-    //     moreText.style.display = "none";
-    //   } else {
-    //     dots.style.display = "none";
-    //     btnText.innerHTML = "Read less";
-    //     moreText.style.display = "inline";
+    // function openMenu() {
+    //   var nav = document.getElementsByClassName('nav')[0];
+		//
+    //   if (nav.style.display === "block") {
+    //     nav.style.display = "none";
+    //   }
+    //   else {
+    //     nav.style.display = "block";
     //   }
     // }
 
+    function openMenu() {
+		  var nav = document.getElementsByClassName('nav')[0];
+		  var y = -136;
+		  var clear = setInterval(frame, 1);
+		  function frame() {
+		    if (y == 0) {
+		      clearInterval(clear);
+		    }	else {
+		      y++;
+					y++;
+		      nav.style.top = y + 'px';
+		    }
 
+		  }
+		}
   </script>
 
 </head>
@@ -61,9 +59,10 @@
 
 <header>
 
+	<img class="background" id="background_top" src="../img/background_top3.jpg" alt="Background_Top">
+
 	<div>
     <button class="menuNav" type="button" name="Menu" onclick="openMenu()">Menu</button>
-    <div class="testNav">hello</div>
     <ul class="nav">
 			<li><a href="../index.html">Home</a></li>
 			<li><a href="../details.html">Details</a></li>
@@ -74,8 +73,8 @@
 			<li><a href="../more.html">More</a></li>
 			<li><a href="../contact.html">Contact</a></li>
 		</ul>
+		<!-- <div class="testNav">hello</div> -->
 	</div>
-	<!---->
 </header>
 
 </body>
