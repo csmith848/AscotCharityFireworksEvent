@@ -41,9 +41,11 @@
 		var y = -136;
 		var hideMenu = true;
 
-    function openMenu() {
+		function openMenu() {
 		  var nav = document.getElementsByClassName('nav')[0];
+		  var mainDiv = document.getElementById('mainDiv');
 		  var bot = document.getElementById('background_bottom');
+		  var foot = document.getElementById('charity_info');
 
 			if (hideMenu == true) {
 				var i = setInterval(animate, 1);
@@ -56,8 +58,10 @@
 						nav.style.display = "block";
 						y++;
 						y++;
+						mainDiv.style.top = y + 'px';
 						nav.style.top = y + 'px';
 						bot.style.top = y + 'px';
+						foot.style.top = y + 'px';
 					}
 				}
 			}
@@ -66,15 +70,19 @@
 				function animate() {
 					if (y == -136) {
 						clearInterval(i);
+						mainDiv.style.top = '0px';
 						bot.style.top = '0px';
+						foot.style.top = '0px';
 						nav.style.display = "none";
 						hideMenu = true;
 						// alert('hideMenu = ' + hideMenu);
 					}	else {
 						y--;
 						y--;
+						mainDiv.style.top = y + 'px';
 						nav.style.top = y + 'px';
 						bot.style.top = y + 'px';
+						foot.style.top = y + 'px';
 					}
 				}
 			}
@@ -105,8 +113,55 @@
 	</div>
 </header>
 
+<main>
+	<div id="mainDiv">
+		<div class="main_intro">
+			<p class="main_intro_heading">
+				Spectacular Fireworks set to music
+				<br>
+				Ascot Racecourse Grandstand, Ascot
+				<br>
+				Gates open 4:00pm, Fireworks start 6:00pm
+			</p>
+	</div>
+</main>
+
 <footer>
-	<img class="background" id="background_bottom" src="../img/background_top3.jpg" alt="Background_Top">
+	<div>
+		<!--	BACKGROUND-BOTTOM    -->
+		<img class="background" id="background_bottom" src="../img/background_bottom.jpg" alt="Background_Top">
+		<!---->
+	</div>
+
+<!--
+			EVENT INFORMATION
+		<div class="homepage_copy" id="info">
+			<p id="info_subheader">
+			ASCOT CHARITY FIREWORKS EVENT
+			</p>
+			<p>
+			Saturday 4th November<br>
+			Spectacular Fireworks set to music<br>
+			Ascot Racecourse Grandstand, Ascot<br>
+			Gates open 4:30pm, Fireworks start 6:30pm
+			</p>
+			<p id="sponsor">
+			Sponsored by Star Fireworks
+			</p>
+			<a href="https://www.starfireworks.co.uk/" target="_blank"><img id="logo_sponsor" src="img/logo_sponsor_colour.png"></a>
+			<img id="logo_sponsor" src="img/logo_sponsor_colour.png">
+		</div>
+-->
+
+	<!--	FOOTER    -->
+	<p id="charity_info">
+	This event is organised by Ascot Round Table, which is affiliated to the National Association of Round Tables of Britain &amp; Ireland
+	<br>
+	www.roundtable.co.uk
+	<br>
+	Ascot Round Table is registered with the Charity Commission, number 1057937
+	</p>
+	<!---->
 </footer>
 
 </body>

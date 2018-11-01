@@ -64,11 +64,11 @@ header {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-/*	position: absolute;*/
+	position: relative;
 }
 
 #background_top {
-/*	z-index: 2;*/
+	z-index: 2;
 }
 
 #background_bottom {
@@ -80,16 +80,56 @@ header {
 
 /*NAVIGATION BAR*/
 
+button.menuNav {
+	position: relative;
+	display: none;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 6px 4px;
+	z-index: 3;
+
+	color: white;
+	text-align: center;
+	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	background-color: rgb(7, 17, 28);
+	font-size: 1.2em;
+
+	border-top: 1px rgba(255, 255, 255, 0.38) solid;
+	border-bottom: 1px rgba(255, 255, 255, 0.38) solid;
+	border-left: none;
+	border-right: none;
+
+	transition: text-shadow 500ms;
+}
+
+button.menuNav:hover {
+	cursor: pointer;
+	color: rgb(240, 240, 240);
+	text-shadow: 2px 0px 1.25em rgba(255, 255, 255, 0.4), -2px 0px 1.25em rgba(255, 255, 255, 0.4), 0px 2px 1.25em rgba(255, 255, 255, 0.4), 0px -2px 1.25em rgba(255, 255, 255, 0.4);
+}
+
+@media screen and (max-width: 660px) {
+	button.menuNav {
+		display: block;
+	}
+}
+
 ul.nav {
+	display: none;
 	margin: 0;
 	width: 100%;
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0;
+	position: relative;
+	z-index: 1;
+
 	text-align: center;
 	list-style: none;
 	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+
 	background-color: rgb(7, 17, 28);
 	border-top: 1px rgba(255, 255, 255, 0.38) solid;
 	border-bottom: 1px rgba(255, 255, 255, 0.38) solid;
@@ -99,7 +139,6 @@ ul.nav {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-/*	background-color: rgba(0, 0, 0, 0.2);*/
 	width: calc(100%/8.4);
 }
 
@@ -110,7 +149,7 @@ ul.nav {
 	padding: 6px 4px;
 	margin: 0;
 	font-size: 1.2em;
-	transition: text-shadow 500ms;
+	transition: text-shadow 500ms, text-decoration 1000ms;
 }
 
 /*
@@ -129,11 +168,10 @@ ul.nav li:last-child a {
 
 .nav a.active {
 	background-color: rgba(0, 0, 0, 0.7);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
 	text-shadow: none;
 	cursor: default;
-/*	box-shadow: 0px 0px 8px 0px rgb(177, 177, 177);*/
 }
 
 @media screen and (max-width: 660px) {
@@ -142,12 +180,14 @@ ul.nav li:last-child a {
 		border-bottom: 1px rgba(255, 255, 255, 0.38) solid;
 		font-size: 0.9em;
 	}
-	.nav li:nth-child(1), .nav li:nth-child(2){
-    	border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+	.nav li:nth-child(7), .nav li:nth-child(8){
+    	border-bottom: none;
 	}
+
 	ul.nav {
 		padding: 1px 0;
-		border: none;
+		border-bottom: 2px rgba(255, 255, 255, 0.38) solid;
 	}
 }
 
@@ -155,14 +195,21 @@ ul.nav li:last-child a {
 
 /*MAIN SECTION*/
 main {
-/*	box-shadow: 0px 0px 8px 0px rgb(177, 177, 177);*/
-	background-color: black;
-	padding: 20px 0px;
-	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-	color: white;
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 20px 0px;
+
+	background-color: black;
+	/*	box-shadow: 0px 0px 8px 0px rgb(177, 177, 177);*/
+
+	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	color: white;
+	}
+
+#mainDiv {
+	position: relative;
+	display: block;
 }
 
 .main_intro {
@@ -607,21 +654,23 @@ footer {
 
 #charity_info {
 	display: block;
+	position: relative;
+	/*	bottom: 0px;*/
+	padding: 4px 0px;
+	margin: 0;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1200px;
+	width: 100%;
+
+	background-color: rgba(245,245,245,0.5);
+	/*	background-color: rgba(0, 0, 0, 0.5);*/
+
 	text-align: center;
 	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
 	color: white;
 	font-size: 0.7em;
 	text-shadow: 0px 1px #5e5e5e;
-	background-color: rgba(245,245,245,0.5);
-/*	background-color: rgba(0, 0, 0, 0.5);*/
-	padding: 4px 0px;
-/*	position: absolute; */
-	width: 100%;
-	max-width: 1200px;
-	margin: 0;
-	margin-left: auto;
-	margin-right: auto;
-/*	bottom: 0px;*/
 }
 
 @media screen and (max-width: 600px) {

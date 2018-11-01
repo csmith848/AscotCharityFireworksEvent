@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	background-color: rgb(7, 17, 28);
 }
 
 img {
@@ -22,6 +23,14 @@ header {
 
 /*BACKGROUNDS*/
 
+.background {
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
 #background_top {
 	z-index: 2;
 }
@@ -31,7 +40,6 @@ header {
 /*	opacity: 0.99;*/
 position: relative;
 }
-
 
 /*NAVIGATION BAR*/
 
@@ -92,7 +100,6 @@ button.menuNav:hover {
 
 ul.nav {
 	display: none;
-	/* top: -136px; */
 	margin: 0;
 	width: 100%;
 	max-width: 1200px;
@@ -109,18 +116,6 @@ ul.nav {
 	background-color: rgb(7, 17, 28);
 	border-top: 1px rgba(255, 255, 255, 0.38) solid;
 	border-bottom: 1px rgba(255, 255, 255, 0.38) solid;
-
-	animation: none;
-}
-
-@keyframes mymove {
-	from {top: -136px;}
-	to {top: 0px;}
-}
-
-@keyframes mymoveBack {
-	from {top: 0px;}
-	to {top: 136px;}
 }
 
 .nav li {
@@ -167,5 +162,59 @@ ul.nav {
 	ul.nav {
 		padding: 1px 0;
 		border-bottom: 2px rgba(255, 255, 255, 0.38) solid;
+	}
+}
+
+
+
+/*MAIN SECTION*/
+main {
+	position: relative;
+	display: block;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px 0px;
+
+	background-color: black;
+	/*	box-shadow: 0px 0px 8px 0px rgb(177, 177, 177);*/
+
+	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	color: white;
+	}
+
+#mainDiv {
+	position: relative;
+	display: block;
+}
+
+
+
+/*FOOTER*/
+
+#charity_info {
+	display: block;
+	position: relative;
+	/*	bottom: 0px;*/
+	padding: 4px 0px;
+	margin: 0;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1200px;
+	width: 100%;
+
+	background-color: rgba(245,245,245,0.5);
+	/*	background-color: rgba(0, 0, 0, 0.5);*/
+
+	text-align: center;
+	font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
+	color: white;
+	font-size: 0.7em;
+	text-shadow: 0px 1px #5e5e5e;
+}
+
+@media screen and (max-width: 600px) {
+	#charity_info {
+		font-size: 0.5em;
 	}
 }
