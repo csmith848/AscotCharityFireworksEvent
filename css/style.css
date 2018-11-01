@@ -560,17 +560,17 @@ input[type=submit]:hover {
 }
 
 .form_row {
-    display: flex;
+  display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
 /* Create two columns that float next to eachother */
 .form_column {
-/*	width: 30vw;*/
-	max-width: 30vw;
-    margin: 0px 20px;
-    padding: 1em;
+	max-width: 500px;
+	width: 60vw;
+  margin: 0px 20px;
+  padding: 1em;
 	flex: 24%;
 }
 
@@ -581,9 +581,9 @@ input[type=submit]:hover {
     clear: both;
 }
 
-#map {
-/*	width: 100%;*/
-/*	width: 40%;*/
+/* #map {
+	// width: 100%;
+	// width: 40%;
 	height: 400px;
 	background-color: rgba(245, 245, 245, 0.57);
 	border: 1px white solid;
@@ -592,7 +592,7 @@ input[type=submit]:hover {
 	text-align: center;
 	line-height: 380px;
 	margin: 1em 0;
-}
+} */
 
 /* Responsive layout - when the screen is less than 900px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 900px) {
