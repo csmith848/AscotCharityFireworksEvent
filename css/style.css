@@ -49,7 +49,8 @@ hr {
 .embeded_map > iframe {
 	display: block;
 	margin: 10 auto 20 auto;
-	width: 90%;
+	width: 100%;
+	max-width: 500px;
 	height: 300px;
 
 	frameborder: 0;
