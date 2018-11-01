@@ -25,7 +25,8 @@
 	<!---->
 
   <script>
-    // function openMenu() {
+		/* BASIC VERSION OF SHOWING/HIDING MENU */
+		// function openMenu() {
     //   var nav = document.getElementsByClassName('nav')[0];
 		//
     //   if (nav.style.display === "block") {
@@ -36,20 +37,47 @@
     //   }
     // }
 
+		/* ADVANCED VERSION OF SHOWING/HIDING MENU */
+		var y = -136;
+		var hideMenu = true;
+
     function openMenu() {
 		  var nav = document.getElementsByClassName('nav')[0];
-		  var y = -136;
-		  var clear = setInterval(frame, 1);
-		  function frame() {
-		    if (y == 0) {
-		      clearInterval(clear);
-		    }	else {
-		      y++;
-					y++;
-		      nav.style.top = y + 'px';
-		    }
+		  var bot = document.getElementById('background_bottom');
 
-		  }
+			if (hideMenu == true) {
+				var i = setInterval(animate, 1);
+				function animate() {
+					if (y == 0) {
+						clearInterval(i);
+						hideMenu = false;
+						// alert('hideMenu = ' + hideMenu);
+					}	else {
+						nav.style.display = "block";
+						y++;
+						y++;
+						nav.style.top = y + 'px';
+						bot.style.top = y + 'px';
+					}
+				}
+			}
+			else if (hideMenu == false) {
+				var i = setInterval(animate, 1);
+				function animate() {
+					if (y == -136) {
+						clearInterval(i);
+						bot.style.top = '0px';
+						nav.style.display = "none";
+						hideMenu = true;
+						// alert('hideMenu = ' + hideMenu);
+					}	else {
+						y--;
+						y--;
+						nav.style.top = y + 'px';
+						bot.style.top = y + 'px';
+					}
+				}
+			}
 		}
   </script>
 
@@ -76,6 +104,10 @@
 		<!-- <div class="testNav">hello</div> -->
 	</div>
 </header>
+
+<footer>
+	<img class="background" id="background_bottom" src="../img/background_top3.jpg" alt="Background_Top">
+</footer>
 
 </body>
 
