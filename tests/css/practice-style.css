@@ -99,7 +99,6 @@ button.menuNav:hover {
 }
 
 ul.nav {
-	display: none;
 	margin: 0;
 	width: 100%;
 	max-width: 1200px;
@@ -160,6 +159,7 @@ ul.nav {
 	}
 
 	ul.nav {
+		display: none;
 		padding: 1px 0;
 		border-bottom: 2px rgba(255, 255, 255, 0.38) solid;
 	}
