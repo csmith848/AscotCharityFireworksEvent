@@ -18,6 +18,6 @@ function portalClick() {
   if (document.getElementById("terms_accept").checked) {
     window.open('https://tickets.ascot.co.uk/connect/Webpages/EntaWebGateway/gateway.aspx?E=N&QL=P5332|G~/WEBPAGES/ascot/eventprices.aspx' , '_blank')
   } else {
-    alert("Please accept the terms above!");
+    window.alert("Please accept the terms above!");
   }
 }

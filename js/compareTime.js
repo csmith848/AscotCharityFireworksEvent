@@ -27,7 +27,12 @@ else if (currentTime > endTime) {..........}
 function compareTime() {..........}
 
 • run function on page load
-compareTime();
+window.onload = function() {
+  compareTime();
+};
+document.addEventListener("DOMContentLoaded", function(event) {
+  compareTime();
+});
 
 */
 
