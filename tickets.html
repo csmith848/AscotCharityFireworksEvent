@@ -23,96 +23,6 @@
 	<!--	FAVICON LINK    -->
 	<link rel="icon" type="image/x-icon" href="img/logo_roundtable_fav32.ico">
 	<!---->
-
-	<script>
-    function termsAccept() {
-      if (checkbox = document.getElementById("terms_accept").checked) {
-        // WHEN LINK IS ACTIVE
-        document.getElementById("portal_button").disabled = false;
-        document.getElementById("portal_button").style.color = "#ff6c00";
-        document.getElementById("portal_button").style.border = "2px solid #ff6c00";
-        document.getElementById("portal_button").style["boxShadow"] = "0px 0px 20px rgba(255, 108, 0, 0.75)";
-      }
-      else {
-        // WHEN LINK IS NOT ACTIVE
-        document.getElementById("portal_button").disabled = true;
-        document.getElementById("portal_button").style.color = "grey";
-        document.getElementById("portal_button").style.border = "2px solid grey";
-        document.getElementById("portal_button").style["boxShadow"] = "0px 0px 20px grey";
-      }
-    }
-		function portalClick() {
-      if (document.getElementById("terms_accept").checked) {
-        window.open('https://tickets.ascot.co.uk/connect/Webpages/EntaWebGateway/gateway.aspx?E=N&QL=P5332|G~/WEBPAGES/ascot/eventprices.aspx' , '_blank')
-      } else {
-        alert("Please accept the terms above!");
-      }
-		}
-
-		/* BASIC VERSION OF SHOWING/HIDING MENU */
-		// function openMenu() {
-    //   var nav = document.getElementsByClassName('nav')[0];
-		//
-    //   if (nav.style.display === "block") {
-    //     nav.style.display = "none";
-    //   }
-    //   else {
-    //     nav.style.display = "block";
-    //   }
-    // }
-
-		/* ADVANCED VERSION OF SHOWING/HIDING MENU */
-		var y = -136;
-		var hideMenu = true;
-
-		function openMenu() {
-		  var nav = document.getElementsByClassName('nav')[0];
-		  var mainDiv = document.getElementById('mainDiv');
-		  var bot = document.getElementById('background_bottom');
-		  var foot = document.getElementById('charity_info');
-
-			if (hideMenu == true) {
-				var i = setInterval(animate, 1);
-				function animate() {
-					if (y == 0) {
-						clearInterval(i);
-						hideMenu = false;
-						// alert('hideMenu = ' + hideMenu);
-					}	else {
-						nav.style.display = "block";
-						y++;
-						y++;
-						mainDiv.style.top = y + 'px';
-						nav.style.top = y + 'px';
-						bot.style.top = y + 'px';
-						foot.style.top = y + 'px';
-					}
-				}
-			}
-			else if (hideMenu == false) {
-				var i = setInterval(animate, 1);
-				function animate() {
-					if (y == -136) {
-						clearInterval(i);
-						mainDiv.style.top = '0px';
-						bot.style.top = '0px';
-						foot.style.top = '0px';
-						nav.style.display = "none";
-						hideMenu = true;
-						// alert('hideMenu = ' + hideMenu);
-					}	else {
-						y--;
-						y--;
-						mainDiv.style.top = y + 'px';
-						nav.style.top = y + 'px';
-						bot.style.top = y + 'px';
-						foot.style.top = y + 'px';
-					}
-				}
-			}
-		}
-  </script>
-
 </head>
 
 <body>
@@ -212,98 +122,8 @@
 						<button id="portal_button" type="button" onclick="portalClick()" value="Go to ticket portal"><u>online ticket portal</u></button>
 			    </form>
 			  </div>
-
-<!--				<form action="oltickets.php" method="post">-->
-					<!-- <h3 style="border-top: 1px solid white; border-bottom: 1px solid white; padding: 10px; text-align: center"> -->
-						<!-- By clicking the link below to proceed to the online ticket portal, you agree that you have read and understood all of the information above. -->
-<!--						<input type="checkbox" name="confirmed" value="yes" onclick="submit();">-->
-					<!-- </h3> -->
-<!--				</form>-->
-				<!-- <h2 style="text-align: center; text-transform: uppercase">
-					<a class="external_link" href="https://tickets.ascot.co.uk/connect/Webpages/EntaWebGateway/gateway.aspx?E=N&QL=P5332|G~/WEBPAGES/ascot/eventprices.aspx" target="_blank"><u>online ticket portal</u></a>
-				</h2> -->
 				<br>
 			</div>
-
-			<!-- *** OLD STATIC TABLE - table overflowed to right on narrow screens *** -->
-			<!-- <table id="school_codes">
-			<tr>
-				<th>School</th>
-				<th>Promotion Code</th>
-			</tr>
-			<tr>
-				<td>St Mary's C of E Winkfield</td>
-				<td>stmarysce</td>
-			</tr>
-			<tr>
-				<td>Ascot Heath Junior School</td>
-				<td>ascotheathjun</td>
-			</tr>
-			<tr>
-				<td>Ascot Heath Infant School</td>
-				<td>ascotheathinfant</td>
-			</tr>
-			<tr>
-				<td>Cranbourne County</td>
-				<td>cranbourne</td>
-			</tr>
-			<tr>
-				<td>Ascot &amp; Cranbourne Pre-School</td>
-				<td>ascranpreschool</td>
-			</tr>
-			<tr>
-				<td>Papplewick School</td>
-				<td>papplewick</td>
-			</tr>
-			<tr>
-				<td>Licenses Victuallers School</td>
-				<td>lvaschool</td>
-			</tr>
-			<tr>
-				<td>Cheapside Primary</td>
-				<td>cheapside</td>
-			</tr>
-			<tr>
-				<td>South Ascot Village</td>
-				<td>sascvillage</td>
-			</tr>
-			<tr>
-				<td>St Francis</td>
-				<td>stfrancis</td>
-			</tr>
-			<tr>
-				<td>St Michaels Primary</td>
-				<td>stmichaels</td>
-			</tr>
-			<tr>
-				<td>Holy Trinity Primary</td>
-				<td>holytrinity</td>
-			</tr>
-			<tr>
-				<td>Charters</td>
-				<td>charters</td>
-			</tr>
-			<tr>
-				<td>Queen Anne</td>
-				<td>queenanne</td>
-			</tr>
-			<tr>
-				<td>The Royal School, Windsor Great Park</td>
-				<td>theroyalschool</td>
-			</tr>
-			<tr>
-				<td>Whitegrove Primary School</td>
-				<td>whitegrove</td>
-			</tr>
-			<tr>
-				<td>Warfied CofE - All Saints</td>
-				<td>allsaints</td>
-			</tr>
-			<tr>
-				<td>Warfield CofE – Woodhurst</td>
-				<td>woodhurst</td>
-			</tr>
-		</table> -->
 
 			<!-- *** NEW DYNAMIC TABLE - changes from table to list of items on smaller screens *** -->
 			<div id="tickets_table">
@@ -462,6 +282,11 @@
 	</p>
 	<!---->
 </footer>
+
+<!--	SCRIPTS    -->
+<script src="js/ticketPortal.js"></script>
+<script src="js/openMenu.js"></script>
+<!---->
 
 </body>
 
