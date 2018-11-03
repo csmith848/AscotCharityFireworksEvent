@@ -59,8 +59,10 @@ hr {
 
 .banner {
 	position: relative;
-	display: none;
+	/* display: none; */
 	z-index: 4;
+	max-width: 1157px;
+	margin: 0 auto;
 	padding: 10 20;
 	background-color: yellow;
 
